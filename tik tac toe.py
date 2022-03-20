@@ -3,7 +3,7 @@ from tkinter import messagebox
 
 win = Tk()
 win.title('Tik Tac Toe game')
-
+win.config(bg="#494949")
 clicked = True
 count = 0
 
@@ -122,17 +122,17 @@ def new_game():
     clicked = True
     count = 0
     
-    b1 = Button(frame,text=" ", font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b1))
-    b2 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b2))
-    b3 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b3))
+    b1 = Button(frame,text=" ", font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white", command=lambda: b_click(b1))
+    b2 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white", command=lambda: b_click(b2))
+    b3 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white",command=lambda: b_click(b3))
 
-    b4 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b4))
-    b5 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b5))
-    b6 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b6))
+    b4 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white",command=lambda: b_click(b4))
+    b5 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white",command=lambda: b_click(b5))
+    b6 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white",command=lambda: b_click(b6))
 
-    b7 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b7))
-    b8 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b8))
-    b9 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#E5E5E5",command=lambda: b_click(b9))
+    b7 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white",command=lambda: b_click(b7))
+    b8 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white",command=lambda: b_click(b8))
+    b9 = Button(frame,text=" ",font=("Helvetics", 20),height=3,width=6,bg="#494949", fg="white",command=lambda: b_click(b9))
 
     b1.grid(row=0,column=0)
     b2.grid(row=0,column=1)
@@ -146,8 +146,11 @@ def new_game():
     b8.grid(row=2,column=1)
     b9.grid(row=2,column=2)
 
-newgame = Button(win, text="New Game", height=2, width=7, padx=50, command=new_game)
-newgame.pack()
+newgame = Button(win, text="New Game", height=2, width=2, padx=70, command=new_game)
+newgame.pack(side="left")
+
+quitgame = Button(win, text="Exit Game", height=2, width=2, padx=70, command=win.destroy)
+quitgame.pack(side="right")
 
 new_game()
 
